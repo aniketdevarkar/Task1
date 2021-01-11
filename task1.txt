@@ -1,0 +1,130 @@
+name :  Aniket Devarkar
+task :  1
+batch : B20
+*********************************************************************************************
+
+1) Difference Between Http1.1 vs Http 2
+-> i)Basic ideology
+     a) Http 1.1:-
+	Developed by Timothy Berners-Lee in 1989 as a communication standard
+     for the World Wide Web, HTTP is a top-level application protocol that exchanges 
+     information between a client computer and a local or remote web server.
+
+     b) Http/2:-
+     HTTP/2 began as the SPDY protocol, developed primarily at Google with the intention
+     of reducing web page load latency by using techniques such as compression, multiplexing,
+     and prioritization.
+
+   ii)Technical differences
+
+     a) Http 1.1 :-
+	1)The most significant features that distinguishes is the binary framing layer, which
+	 can be thought of as a part of the application layer in the internet protocol stack. 
+	but Http 1.1 keeps all requests and responses in plain text. 
+	
+	2)In this process, a client sends a text-based request to a server by calling a method 
+	like GET or POST. In response, the server sends a resource like an HTML page back to 
+	the client.
+
+	3)The conversion of messages into binary is not allowed in Http 1.1
+
+     b) Http/2 :-
+	1)HTTP/2 uses the binary framing layer to encapsulate all messages in binary format,
+ 	while still maintaining HTTP semantics, such as verbs, methods, and headers. 
+
+        2)An application level API would still create messages in the conventional HTTP formats,
+ 	but the underlying layer would then convert these messages into binary.This ensures that 
+	web applications created before HTTP/2 can continue functioning as normal when
+	interacting with the new protocol.
+	
+	3)The conversion of messages into binary allows HTTP/2 to try new approaches to 
+	data delivery.
+
+
+
+2) Http version history?
+
+->  i) HTTP (HyperText Transfer Protocol) is the underlying protocol of the World Wide Web.
+     Developed by Tim Berners-Lee and his team between 1989-1991, HTTP has seen many changes, 
+     keeping most of the simplicity and further shaping its flexibility.
+
+    ii) HTTP/0.9 – The one-line protocol:-
+	HTTP/0.9 is extremely simple: requests consist of a single line and start with the only
+	possible method GET followed by the path to the resource(not the URL as both the 
+	protocol, server, and port are unnecessary once connected to the server).
+
+    iii) HTTP/1.0 – Building extensibility :-
+	a) A status code line is also sent at the beginning of the response, allowing the browser 
+	itself to understand the success or failure of the request and to adapt its behavior in 
+	consequence (like in updating or using its local cache in a specific way).
+	b) With the help of the new HTTP headers, the ability to transmit other documents than 
+	plain HTML files has been added due to the Content-Type header.
+ 
+    iv) HTTP/1.1 – The standardized protocol :-
+	HTTP/1.1 clarified ambiguities and introduced numerous improvements:
+	a) connection can be reused, saving time to reopen it.
+	b) Pipelining has been added, allowing to send a second request before the answer
+	 for the first one is fully transmitted, lowering the latency of the communication.
+	c)Due to the Host header, the ability to host different domains at the same IP
+	 address now allows server colocation.
+	d)creating new headers or methods is easy – and even if the HTTP/1.1 protocol was 
+	refined over two revisions.( RFC 2616 published in June 1999,RFC 7230-RFC 7235 published 
+	in June 2014)
+	
+     v) HTTP/2 – A protocol for greater performance :-
+	a)It is a binary protocol rather than text. It can no longer be read and created manually.
+ 	 Despite this hurdle, improved optimization techniques can now be implemented.
+	b)It is a multiplexed protocol. Parallel requests can be handled over the same connection
+	c)It compresses headers,this removes duplication and overhead of data transmitted.
+	d)It allows a server to populate data in a client cache, in advance of it being required,
+	through a mechanism called the server push.
+
+3) 5 Differences between Browser JS console vs Nodejs ?
+
+->  i)JavaScript is a simple programming language which runs in any browser JavaScript Engine.
+     Whereas Node JS is an interpreter or running environment for a JavaScript programming
+     language which holds a lot of excesses require libraries which can easily be accessed 
+     from JavaScript programming for better use.
+
+    ii)JavaScript is normally used for any client-side activity for one web application.
+      Whereas Node JS mainly used for accessing or running any operating system for 
+      non-blocking operation.      
+
+    iii)JavaScript running in any engine like Spider monkey (FireFox), JavaScript Core 
+	(Safari), V8 (Google Chrome).
+	So JavaScript programming is very easy to write and put any running environment 
+	means proper browser. Whereas Node JS only support V8 engine which googles chrome 
+	specific.But whether it support V8 engine, written JavaScript code can able to run
+	in any environment.
+
+     iv)For accessing any operating system specific non-blocking task JavaScript has some 
+	specific object but all of them are operating system specific.
+	Node JS is given utility to run some operating system specific non-blocking tasks
+	 from any JavaScript programming. It doesn’t have any operating system specific constant.
+
+     v)JavaScript is normally following Java Programming language standard. There may have some 
+	different way of writing code but at the same time, we can say it following Java
+	Programming language standard. Whereas node JS is written in C++, and provide V8 engine
+	base browser javascript running engine which helps us to run written javascript program
+	in any browser environment.
+
+4) what happens when you type a url in the web browser ?
+-> following are the steps followed:-
+	1.You enter a URL into a web browser
+	2.The browser looks up the IP address for the domain name via DNS
+	3.The browser sends a HTTP request to the server
+	4.The server sends back a HTTP response
+	5.The browser begins rendering the HTML
+	6.The browser sends requests for additional objects embedded in HTML 
+	(images, css, JavaScript) and repeats steps 3-5.
+	7.Once the page is loaded, the browser sends further async requests as needed.
+   for example:-
+	i) When you type “https://www.abcd.com” into your browser the first thing that happens
+	is a Domain Name Server (DNS) matches “abcd.com” to an IP address.
+        ii) Then the browser sends an HTTP request to the server and the server sends back 
+	an HTTP response.
+	iii) The browser begins rendering the HTML on the page while also requesting any 
+	additional resources such as CSS, JavaScript, images, etc.
+	iv) Each subsequent request completes a request/response cycle and is rendered in
+	 turn by the browser.
+	v) Then once the page is loaded some sites will make further asynchronous requests.
